@@ -1,7 +1,7 @@
-#Learning React in simpler way and project base learning
+#Learning React in a simpler way and project base learning
 
 # 1. Intro. to React
   Things Learned : 
-    What is react?
-    How to create element and nested elements in React?
-    importing React in our project via CDN links (Not preferred learn better way a head)
+    <li> What is react? </li>
+    <li> How to create element and nested elements in React? </li>
+    <li> Importing React in our project via CDN links (Not preferred learn better way ahead)</li>
