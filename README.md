@@ -14,3 +14,11 @@
     <li> node_modules </li>
     <li> package.json file </li>
     <li> package-lock.json file </li>
+
+# 3. Laying Foundation
+  Things Learned
+    <li> babel / polyfill </li>
+    <li> work of babel </li>
+    <li> Components -> 1. Class Based Components 2. Functional Components </li>
+    <li> JSX </li>
+    <li> Component Composition </li>
