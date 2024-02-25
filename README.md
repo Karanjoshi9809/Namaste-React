@@ -22,3 +22,23 @@
     <li> Components -> 1. Class Based Components 2. Functional Components </li>
     <li> JSX </li>
     <li> Component Composition </li>
+
+# 4. Talk is cheap, show me code
+  Things Learned
+    <li> React.Fragment </li>
+    <li> Understanding of Config Driven UI </li>
+    <li> props </li>
+    <li> Virtual DOM </li>
+    <li> Reconciliation / Fiber </li>
+    <li> Why we need key in React element if we have more than one child with same type ? </li>
+
+# 5. Let's get hooked
+  Things Learned
+    <li> File structure for project </li>
+    <li> ES6 syntax of import/export </li>
+    <li> export default v/s named export </li>
+    <li> import default v/s named import </li>
+    <li> import * as obj from .... </li>
+    <li> import {...} from ... </li>
+    <li> state & useState() hook in React </li>
+    <li> why do we need state in React? </li>
