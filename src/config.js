@@ -1,18 +1,6 @@
-const Header = () => {
-    return (
-        <div className="header">
-            <img className="logo" alt="Logo" src="https://yt3.googleusercontent.com/Z5AwukhuUCwpdx3m75x1Yl5t4NQEeBdIDB8uf8CpankcRrNFZTMD6NlEOJSB0QnRfito9_tV=s900-c-k-c0x00ffffff-no-rj" />
-            <div className="nav-items">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Cart</a></li>
-            </div>
-        </div>
-    )
-}
+export const IMG_CDN_URL = `https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/`;
 
-const restrauntList = [
+export const restaurantList = [
     {
         "info": {
             "id": "102216",
@@ -912,56 +900,4 @@ const restrauntList = [
             }
         }
     }
-]
-
-const RestrauntCard = ({ restaurant }) => {
-    return (
-        <div className="card">
-            <img src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/${restaurant.cloudinaryImageId}`} />
-            <h2>{restaurant.name}</h2>
-            <h3>{restaurant.cuisines.join(", ")}</h3>
-            <h4>{restaurant.avgRatingString} stars</h4>
-        </div>
-    )
-}
-
-const Body = () => {
-    return (
-        <div className="restaurant">
-            {/* <RestrauntCard restaurant={restrauntList[0].info} />
-            <RestrauntCard restaurant={restrauntList[1].info} />
-            <RestrauntCard restaurant={restrauntList[2].info} />
-            <RestrauntCard restaurant={restrauntList[3].info} />
-            <RestrauntCard restaurant={restrauntList[4].info} />
-            <RestrauntCard restaurant={restrauntList[5].info} />
-            <RestrauntCard restaurant={restrauntList[6].info} />
-            <RestrauntCard restaurant={restrauntList[7].info} />
-            <RestrauntCard restaurant={restrauntList[8].info} />
-            <RestrauntCard restaurant={restrauntList[9].info} />
-            <RestrauntCard restaurant={restrauntList[10].info} /> */}
-            {restrauntList.map((restraunt) => {
-                return <RestrauntCard restaurant={restraunt.info} key={restraunt.info.id}/>
-            })}
-        </div>
-    )
-}
-
-const Footer = () => {
-    return (
-        <h1>Footer</h1>
-    )
-}
-
-
-
-function App() {
-    return (
-        <>
-            <Header />
-            <Body />
-            <Footer />
-        </>
-    );
-}
-
-export default App;
+] 
