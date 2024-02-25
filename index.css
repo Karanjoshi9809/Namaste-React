@@ -1,5 +1,58 @@
-.container{
+/* .container{
     border: 2px solid;
     padding: 2rem;
     background-color: aqua;
+}
+ */
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    margin: 0rem 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    border: 2px solid;
+    background-color: white;
+}
+
+.header .logo{
+    width: 4rem;
+    height: 4rem;
+}
+
+.header li{
+    list-style-type: none;
+}
+
+.header li a{
+    color: black;
+    text-decoration: none;
+}
+
+.header .nav-items{
+    display: flex;
+    gap: 1rem;
+    padding: 0.5rem;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem;
+    border: 2px solid;
+    width: 12rem;
+    padding: 0.5rem;
+}
+
+.card img{
+    height: 10rem;
+}
+
+.restaurant{
+    display: flex;
+    flex-wrap: wrap;
 }
