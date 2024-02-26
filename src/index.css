@@ -4,12 +4,12 @@
     background-color: aqua;
 }
  */
-body{
+body {
     margin: 0;
     padding: 0;
 }
 
-.header{
+.header {
     margin: 0rem 0.5rem;
     display: flex;
     justify-content: space-between;
@@ -19,27 +19,27 @@ body{
     background-color: white;
 }
 
-.header .logo{
+.header .logo {
     width: 4rem;
     height: 4rem;
 }
 
-.header li{
+.header li {
     list-style-type: none;
 }
 
-.header li a{
+.header li a {
     color: black;
     text-decoration: none;
 }
 
-.header .nav-items{
+.header .nav-items {
     display: flex;
     gap: 1rem;
     padding: 0.5rem;
 }
 
-.card{
+.card {
     display: flex;
     flex-direction: column;
     margin: 0.5rem;
@@ -48,28 +48,53 @@ body{
     padding: 0.5rem;
 }
 
-.card img{
+.card img {
     height: 10rem;
 }
 
-.restaurant-list{
+.restaurant-list {
     display: flex;
     flex-wrap: wrap;
 }
 
-.search-bar{
+.search-bar {
     margin: 0.5rem;
 }
 
-.search-input{
+.search-input {
     padding: 0.2rem;
     font-size: 1.2rem;
     margin-right: 0.5rem;
 }
 
-.search-btn{
+.search-btn {
     padding: 0.2rem;
     font-size: 1.2rem;
     background-color: aquamarine;
     border-radius: 0.2rem;
+}
+
+.shimmer{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.shimmer-card {
+    margin: 0.5rem;
+    border: 2px solid;
+    padding: 0.5rem;
+    width: 12rem;
+    height: 18rem;
+    animation: shimmer 2s infinite;
+    background: linear-gradient(to right, #eff1f3 4%, #e2e2e2 25%, #eff1f3 36%);
+    background-size: 1000px 100%;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
 }
