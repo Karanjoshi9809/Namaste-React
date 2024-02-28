@@ -1,5 +1,5 @@
 import RestaurantCard from './RestaurantCard'
-import { restaurantList } from '../config'
+import { restaurantList, swiggy_api_URL } from '../config'
 import { useState, useEffect } from 'react'
 import Shimmer from './Shimmer'
 import { Link } from 'react-router-dom'
@@ -20,7 +20,8 @@ const Body = () => {
         getRestaurants()
     }, [])
     async function getRestaurants() {
-        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.54702956252698&lng=72.92605586349966&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING")
+        // const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.54702956252698&lng=72.92605586349966&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING")
+        const data = await fetch(swiggy_api_URL)
         const JsonData = await data.json()
         // console.log(JsonData)
         setAllRestaurants(JsonData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
@@ -79,8 +80,8 @@ const Body = () => {
                         <h1>No result found! Try Again</h1> : 
                         filteredRestaurants.map((restraunt) => {
                             return (
-                                <Link to={"/restaurant/"+restraunt.info.name+restraunt.info.id}>
-                                    <RestaurantCard restaurant={restraunt.info} key={restraunt.info.id} />
+                                <Link to={"/restaurant/"+restraunt.info.id}  key={restraunt.info.id}>
+                                    <RestaurantCard restaurant={restraunt.info} />
                                 </Link>
                             )
                         })
