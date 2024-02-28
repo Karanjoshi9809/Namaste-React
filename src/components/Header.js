@@ -1,15 +1,17 @@
 import { useState } from "react"
+import FlavorFusionLogo from '../assets/FlavorFusionLogo.jpg'
+import { Link } from "react-router-dom"
 
 const Header = () => {
     const [isLoggedIn, setIsLoggedIn] = useState(false)
     return (
         <div className="header">
-            <img className="logo" alt="Logo" src="https://yt3.googleusercontent.com/Z5AwukhuUCwpdx3m75x1Yl5t4NQEeBdIDB8uf8CpankcRrNFZTMD6NlEOJSB0QnRfito9_tV=s900-c-k-c0x00ffffff-no-rj" />
+            <Link to="/"><img className="logo" alt="Logo" src={FlavorFusionLogo} /></Link>
             <div className="nav-items">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Cart</a></li>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/about">About</Link></li>
+                <li><Link to="/contact">Contact</Link></li>
+                <li><Link to="/cart">Cart</Link></li>
                 {!isLoggedIn ? (<button onClick={() => setIsLoggedIn(true)}>Login</button>) 
                             : (<button onClick={() => setIsLoggedIn(false)}>Logout</button>)}
             </div>

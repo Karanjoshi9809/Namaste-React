@@ -46,6 +46,7 @@ body {
     border: 2px solid;
     width: 12rem;
     padding: 0.5rem;
+    height: 28rem;
 }
 
 .card img {
@@ -97,4 +98,9 @@ body {
     100% {
         background-position: 1000px 0;
     }
+}
+
+a{
+    text-decoration: none;
+    color: black;
 }
