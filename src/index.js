@@ -8,6 +8,8 @@ import Cart from './components/Cart';
 import Error from './components/Error';
 import RestaurantMenu from './components/RestaurantMenu';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import Profile from './components/Profile';
+import ProfileClass from './components/ProfileClass'
 
 const appRouter = createBrowserRouter([
     {
@@ -21,7 +23,14 @@ const appRouter = createBrowserRouter([
             },
             {
                 path: "/about",
-                element: <About />
+                element: <About />,
+                children: [
+                    {
+                        path: "profile",
+                        // element: <Profile />
+                        element: <ProfileClass />
+                    }
+                ]
             },
             {
                 path: "/contact",
