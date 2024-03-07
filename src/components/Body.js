@@ -24,39 +24,39 @@ const Body = () => {
 
     return (
         (allRestaurants?.length === 0) ?
-            <div className='body'>
-                <div className='search-bar'>
+            <div id='body'>
+                <div className='my-4 mx-2 flex justify-center'>
                     <input
                         type='text'
                         placeholder='search restaurant'
-                        className='search-input'
+                        className='border-2 rounded-md px-4 mr-2 h-[2rem]'
                         value={searchText}
                         onChange={handleInputEnter}
                     />
                     <button
-                        className='search-btn'
+                        className='border-2 px-[1.2rem] font-medium text-base rounded-md bg-cyan-300 hover:bg-cyan-400'
                     >Search</button>
                 </div>
                 <Shimmer />
             </div> :
-            <div className="body">
-                <div className='search-bar'>
+            <div id="body">
+                <div className='my-4 mx-2 flex justify-center'>
                     <input
                         type='text'
                         placeholder='search restaurant'
-                        className='search-input'
+                        className='border-2 rounded-md px-4 mr-2 h-[2rem]' 
                         value={searchText}
                         onChange={handleInputEnter}
                     />
                     <button
-                        className='search-btn'
+                        className='border-2 px-[1.2rem] font-medium text-base rounded-md bg-cyan-300 hover:bg-cyan-400'
                         onClick={() => {
                             const filteredData = searchRestaurants(searchText, allRestaurants)
                             setFilteredRestaurants(filteredData)
                         }}
                     >Search</button>
                 </div>
-                <div className="restaurant-list">
+                <div className="flex flex-wrap justify-center items-center">
                     {/* <RestrauntCard restaurant={restrauntList[0].info} />
                         <RestrauntCard restaurant={restrauntList[1].info} />
                         <RestrauntCard restaurant={restrauntList[2].info} />
