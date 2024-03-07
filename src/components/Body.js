@@ -1,32 +1,24 @@
 import RestaurantCard from './RestaurantCard'
-import { restaurantList, swiggy_api_URL } from '../config'
-import { useState, useEffect } from 'react'
+// import { restaurantList, swiggy_api_URL } from '../config'
+import { useState } from 'react'
 import Shimmer from './Shimmer'
 import { Link } from 'react-router-dom'
+import { searchRestaurants } from '../utils/helper'
+import useGetRestaurant from '../utils/useGetRestaurant'
+import useIsOnline from '../utils/useIsOnline'
 
 const Body = () => {
     const [searchText, setSearchText] = useState("");
-    const [allRestaurants, setAllRestaurants] = useState([])
-    const [filteredRestaurants, setFilteredRestaurants] = useState([])
+    
+    const {allRestaurants, filteredRestaurants, setFilteredRestaurants} = useGetRestaurant()
     const handleInputEnter = (e) => {
         setSearchText(e.target.value)
     }
-    const searchRestaurants = (searchText, restaurants) => {
-        const filteredData = restaurants.filter((restaurant) => { return restaurant.info.name.toLowerCase().includes(searchText.toLowerCase()) })
-        return filteredData
-    }
-    useEffect(() => {
-        // API call
-        getRestaurants()
-    }, [])
-    async function getRestaurants() {
-        // const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.54702956252698&lng=72.92605586349966&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING")
-        const data = await fetch(swiggy_api_URL)
-        const JsonData = await data.json()
-        // console.log(JsonData)
-        setAllRestaurants(JsonData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
-        setFilteredRestaurants(JsonData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
-    }
+    
+    const isOnline = useIsOnline()
+
+    if(!isOnline) return <h1>🔴 It looks like you are offline</h1>
+
     // early return
     if(!allRestaurants) return null;
 
