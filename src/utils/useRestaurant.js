@@ -32,6 +32,7 @@ function useRestaurant(id) {
                     uniqueMenuItems.push(item);
                 }
             })
+            console.log(uniqueMenuItems)
             setMenuItems(uniqueMenuItems);
         } catch (error) {
             setMenuItems([]);
