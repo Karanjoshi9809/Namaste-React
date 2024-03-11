@@ -1,12 +1,19 @@
 import { useParams } from "react-router-dom";
 import useRestaurant from "../utils/useRestaurant";
 import { IMG_CDN_URL } from "../config";
+import { useDispatch } from "react-redux";
+import { addItem } from "../utils/cartSlice";
 
 function RestaurantMenu() {
 
     const { id } = useParams();
 
     const { restaurant, menuItems } = useRestaurant(id)
+
+    const dispatch = useDispatch()
+    const addFoodItem = (item) => {
+        dispatch(addItem(item))
+    }
 
     return (
         <div className="flex flex-col justify-center items-center box-border">
@@ -42,7 +49,12 @@ function RestaurantMenu() {
                                 <p className="text-base bg-green-400 w-14 pl-1 rounded-md">{item?.ratings?.aggregatedRating?.rating} ★</p>
                             </div>
                             <div className="flex">
-                                <button className="rounded-md px-2 bg-cyan-300 hover:bg-cyan-400">+ Add Item</button>
+                                <button 
+                                    className="rounded-md px-2 bg-cyan-300 hover:bg-cyan-400"
+                                    onClick={() => addFoodItem(item)}
+                                >
+                                    + Add Item
+                                </button>
                             </div>
                         </div>
                     )
