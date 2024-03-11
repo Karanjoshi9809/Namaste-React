@@ -89,3 +89,12 @@
     <li> React DevTools </li>
     <li> context API </li>
     <li> useContext, context.provider, context.consumer </li>
+
+# 12. Let's build our store
+  Things Learned:
+    <li> Redux / Redux Toolkit </li>
+    <li> Need of Redux </li>
+    <li> dispatch, reducer, slice, store, selector(subscribing to store) </li>
+    <li> useDispatch() </li>
+    <li> useSelector() </li>
+    <li> ReduxDevtools </li>
