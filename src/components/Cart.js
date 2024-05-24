@@ -23,7 +23,7 @@ function Cart() {
         <>
             <h1 className="font-bold text-xl ml-4">Cart Items - {cartItems.length}</h1>
             <button 
-                className="border-2 ml-4 px-4 rounded-md mt-2 bg-red-400 text-lg"
+                className="border-2 ml-4 px-4 rounded-md mt-2 bg-red-500 text-lg shadow-lg hover:bg-red-600"
                 onClick={() => clearCartItems()}
             >
                 Clear Cart
@@ -45,7 +45,7 @@ function Cart() {
                                         className="rounded-md px-2 bg-cyan-300 hover:bg-cyan-400"
                                         onClick={() => removeFoodItem(item)}
                                     >
-                                        - Remove Item
+                                        - Remove
                                     </button>
                                 </div>
                             </div>
@@ -54,10 +54,16 @@ function Cart() {
                 </div>
                 <div className="w-[30vw] flex flex-col border-2 rounded-md mx-4 h-[20rem] mt-4 px-4 pt-1">
                     <h1 className="text-2xl font-extrabold text-center my-4">Invoice</h1>
+                    <div className="font-medium">
+                    <p>Name: user1</p>
+                    <p>Room: xyz, abc street</p>
+                    <p>city, state</p>
+                    <p>000 000</p>
+                    </div>
                     {cartItems.map((item) => {
                         return (
                             <div className="flex justify-between">
-                                <p className="font-bold">{item?.name}</p>
+                                <p className="">{item?.name}</p>
                                 <p>{(item?.price) / 100}</p>
                             </div>
                         )
