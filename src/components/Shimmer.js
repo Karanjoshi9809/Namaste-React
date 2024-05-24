@@ -1,7 +1,7 @@
 function Shimmer() {
     return (
         <div className="flex flex-wrap justify-center items-center">
-            {Array(12).fill("").map((e, index) => <div key={index} className="flex border-2 flex-col rounded-lg shadow-md m-2 w-[18rem] h-[22rem] overflow-hidden">
+            {Array(12).fill("").map((e, index) => <div key={index+1} className="flex border-2 flex-col rounded-lg shadow-md m-2 w-[18rem] h-[22rem] overflow-hidden">
                 <div className='h-[14rem] overflow-hidden bg-gradient-to-t from-[#eff1f3] to-[#e2e2e2]'>
 
                 </div>
@@ -46,7 +46,7 @@ export const MenuShimmer = () => {
                         // return <p key={item?.id}>{item?.name}</p>
                         return (
                             <div
-                                key={index}
+                                key={index*Math.random()+1}
                                 className="border-2 my-2 rounded-md p-4 flex justify-between items-center"
                             >
                                 <div className="w-20 h-20 rounded-md bg-gradient-to-t from-[#eff1f3] to-[#e2e2e2]">

@@ -32,12 +32,12 @@ function useRestaurant(id) {
                     uniqueMenuItems.push(item);
                 }
             })
-            console.log(uniqueMenuItems)
+            // console.log(uniqueMenuItems)
             setMenuItems(uniqueMenuItems);
         } catch (error) {
             setMenuItems([]);
             setRestaurant(null);
-            console.log(error);
+            // console.log(error);
         }
     }
     return {restaurant, menuItems}

@@ -13,7 +13,7 @@ function useGetRestaurant(){
         // const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.54702956252698&lng=72.92605586349966&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING")
         const data = await fetch(swiggy_api_URL)
         const JsonData = await data.json()
-        console.log(JsonData)
+        // console.log(JsonData)
         setAllRestaurants(JsonData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
         setFilteredRestaurants(JsonData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
     }

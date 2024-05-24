@@ -9,7 +9,7 @@ import Error from './components/Error';
 import RestaurantMenu from './components/RestaurantMenu';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Profile from './components/Profile';
-import ProfileClass from './components/ProfileClass'
+import ProfileClass from './components/ProfileClass.js';
 // import Instamart from './components/Instamart';
 import Shimmer from './components/Shimmer';
 

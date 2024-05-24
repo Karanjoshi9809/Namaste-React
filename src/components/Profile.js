@@ -3,7 +3,7 @@ import { useEffect } from "react";
 function Profile() {
     useEffect(() => {
         const timer = setInterval(() => {
-            console.log("SetInterval Called");
+            // console.log("SetInterval Called");
         }, 1000);
         return () => clearInterval(timer);
     }, [])
