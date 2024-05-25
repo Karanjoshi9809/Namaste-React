@@ -37,12 +37,12 @@ function About() {
                         <p className="mb-4">Welcome to <br /> The world of <br /></p>
                         <span className="bg-amber-500 px-2 rounded-md text-gray-200">Tasty & Fresh Food</span>
                     </h1>
-                    <h4 className="text-2xl font-bold text-gray-700 mt-6 font-sans max-[650px]:text-base">
+                    <h4 className="text-2xl font-bold text-gray-700 mt-6 font-sans max-[650px]:text-base text-center">
                         "Better you will feel if you eat a Flavor<span className="text-amber-500">Fusion's</span> healthy
                         meal"
                     </h4>
                 </div>
-                <div className="">
+                <div className="max-[650px]:h-52 max-[650px]:w-52">
                     <img src={burgerImage} alt="Food Image" />
                 </div>
             </div>

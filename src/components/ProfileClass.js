@@ -73,8 +73,8 @@ class ProfileClass extends React.Component {
     render() {
         return (
 
-            <div className="flex flex-col justify-center items-center flex-wrap rounded-lg shadow-xl w-[40vw] p-10">
-                <h1 className="text-2xl font-bold">About Me</h1>
+            <div className="flex flex-col justify-center items-center flex-wrap rounded-lg shadow-xl w-[40vw] p-10 max-[450px]:w-[50vw]">
+                <h1 className="text-2xl font-bold text-center">About Me</h1>
                 <div className="overflow-hidden self-center">
                     <a href="https://github.com/Karanjoshi9809" className="my-6 flex items-center justify-center" target="_blank" rel="noopener noreferrer">
                         <img
@@ -85,7 +85,7 @@ class ProfileClass extends React.Component {
                         />
                     </a>
                     {console.log("Hi")}
-                    <p className="font-semibold mb-2">MERN Stack | JavaScript | DSA | Web Developer</p>
+                    <p className="font-semibold mb-2 text-center">MERN Stack | JavaScript | DSA | Web Developer</p>
                     <SocialProfileClass />
                 </div>
             </div>

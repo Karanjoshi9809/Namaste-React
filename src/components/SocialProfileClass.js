@@ -27,7 +27,7 @@ class SocialProfileClass extends Component {
     render() {
         // console.log("SocialProfileClass child render");
         return (
-            <div className="flex gap-10 my-2 items-center justify-center">
+            <div className="flex gap-10 my-2 items-center justify-center flex-wrap w-auto">
                 <a
                     href={Linkedin_Link}
                     title="Follow me on Linkedin"

@@ -14,8 +14,8 @@ function useGetRestaurant(){
         const data = await fetch(swiggy_api_URL)
         const JsonData = await data.json()
         // console.log(JsonData)
-        setAllRestaurants(JsonData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
-        setFilteredRestaurants(JsonData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+        setAllRestaurants(JsonData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+        setFilteredRestaurants(JsonData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
     }
 
     return {allRestaurants, filteredRestaurants, setFilteredRestaurants}

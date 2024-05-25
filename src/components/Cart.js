@@ -28,16 +28,16 @@ function Cart() {
             >
                 Clear Cart
             </button>
-            <div className="border-2 m-2 rounded-md p-8 flex justify-between">
+            <div className="border-2 m-2 rounded-md p-8 flex justify-between max-[450px]:flex-col">
                 <div>
                     {cartItems.map((item) => {
                         return (
-                            <div key={item?.id} className="border-2 rounded-md my-2 p-4 flex justify-between w-[40vw]">
+                            <div key={item?.id} className="border-2 rounded-md my-2 p-4 flex justify-between w-[40vw] max-[650px]:h-auto max-[650px]:w-full max-[650px]:justify-center">
                                 <div className="">
                                     <img src={IMG_CDN_URL + item?.imageId} alt="food img" className="w-20 h-20 rounded-md" />
                                 </div>
                                 <div className="mx-4 w-[30rem]">
-                                    <p className="font-bold">{item?.name}</p>
+                                    <p className="font-bold">{item?.name?.slice(0, 18)}</p>
                                     <p>Price : {(item?.price) / 100}</p>
                                 </div>
                                 <div>
@@ -52,7 +52,7 @@ function Cart() {
                         )
                     })}
                 </div>
-                <div className="w-[30vw] flex flex-col border-2 rounded-md mx-4 h-[20rem] mt-4 px-4 pt-1">
+                <div className="w-[30vw] flex flex-col border-2 rounded-md mx-4 h-[20rem] mt-4 px-4 pt-1 max-[650px]:h-auto max-[650px]:w-full">
                     <h1 className="text-2xl font-extrabold text-center my-4">Invoice</h1>
                     <div className="font-medium">
                     <p>Name: user1</p>
@@ -63,7 +63,7 @@ function Cart() {
                     {cartItems.map((item) => {
                         return (
                             <div className="flex justify-between">
-                                <p className="">{item?.name}</p>
+                                <p className="">{item?.name?.slice(0, 18)}</p>
                                 <p>{(item?.price) / 100}</p>
                             </div>
                         )

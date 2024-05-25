@@ -37,21 +37,21 @@ function RestaurantMenu() {
                         </div>
                     </div>
                 </div>
-                <div className="my-4 py-4 px-6 flex flex-col border-2 rounded-lg">
+                <div className="my-4 py-4 px-6 flex flex-col border-2 rounded-lg max-[650px]:w-[80vw]">
                     <h2 className="border-b-2 text-xl font-bold">Menu Items - {menuItems.length} Items</h2>
                     {menuItems?.map((item) => {
                         // return <p key={item?.id}>{item?.name}</p>
                         return (
                             <div
                                 key={item?.id}
-                                className="border-2 my-2 rounded-md p-4 flex justify-between items-center"
+                                className="border-2 my-2 rounded-md p-4 flex justify-between items-center max-[650px]:flex-col overflow-hidden"
                             >
                                 <div>
                                     <img src={IMG_CDN_URL + item?.imageId} alt="food img" className="w-20 h-20 rounded-md" />
                                 </div>
-                                <div className="mx-4 w-[30rem]">
-                                    <p className="font-bold">{item?.name}</p>
-                                    <p>Price : {(item?.price) / 100}</p>
+                                <div className="overflow-hidden mx-4 w-[30rem]">
+                                    <p className="font-bold max-[650px]:text-center">{item?.name}</p>
+                                    <p className="max-[650px]:text-center">Price : {(item?.price) / 100}</p>
                                     {/* <p className="text-base bg-green-400 w-14 pl-1 rounded-md">{item?.ratings?.aggregatedRating?.rating} ★</p> */}
                                 </div>
                                 <div className="flex">

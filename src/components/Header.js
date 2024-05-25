@@ -20,7 +20,7 @@ const Header = () => {
                 <li className="list-none font-medium text-base  hover:bg-yellow-400 rounded-md p-2"><Link to="/about">About</Link></li>
                 <li className="list-none font-medium text-base  hover:bg-yellow-400 rounded-md p-2"><Link to="/contact">Contact</Link></li>
                 <li className="list-none font-medium text-base  hover:bg-yellow-400 rounded-md p-2"><Link to="/cart">Cart 🛒 ({cartItems.length })</Link></li>
-                <li className="list-none font-medium text-base  hover:bg-yellow-400 rounded-md p-2"><Link to="/instamart">Instamart</Link></li>
+                <li className="list-none font-medium text-base  hover:bg-yellow-400 rounded-md p-2"><Link to="/faq">FAQ</Link></li>
                 {!isLoggedIn ? (<button 
                                     onClick={() => setIsLoggedIn(true)}
                                     className="hover:bg-yellow-400 rounded-md p-2 font-medium text-base"

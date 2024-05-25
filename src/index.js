@@ -13,7 +13,7 @@ import ProfileClass from './components/ProfileClass.js';
 // import Instamart from './components/Instamart';
 import Shimmer from './components/Shimmer';
 
-const Instamart = lazy(() => import('./components/Instamart'));
+const FAQ = lazy(() => import('./components/FAQ'));
 
 const appRouter = createBrowserRouter([
     {
@@ -49,9 +49,9 @@ const appRouter = createBrowserRouter([
                 element: <RestaurantMenu />
             },
             {
-                path: "/instamart",
+                path: "/faq",
                 element: <Suspense fallback={<Shimmer />}>
-                            <Instamart />
+                            <FAQ />
                          </Suspense> 
             }
         ]

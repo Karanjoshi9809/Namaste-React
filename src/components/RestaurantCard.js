@@ -3,7 +3,7 @@ import { IMG_CDN_URL } from '../config'
 const RestaurantCard = ({ restaurant }) => {
     return (
         <div className="flex border-2 flex-col hover:scale-95 rounded-lg shadow-md m-2 w-[18rem] h-[22rem] overflow-hidden">
-            <div className='h-[14rem] overflow-hidden rounded-xl flex justify-center items-center my-2'>
+            <div className='w-[16rem] ml-[1rem] h-[14rem] overflow-hidden rounded-xl flex justify-center items-center my-2'>
                 <img className='w-[16rem] h-[14rem] rounded-lg' src={IMG_CDN_URL + restaurant.cloudinaryImageId} />
             </div>
             <div className='p-2'>

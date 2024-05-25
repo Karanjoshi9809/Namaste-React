@@ -1,7 +1,7 @@
 const Footer = () => {
     const year = new Date().getFullYear();
     return (
-        <div className="flex h-16 mt-14 bg-amber-50 justify-center items-center">
+        <div className="flex h-16 mt-14 bg-amber-50 justify-center items-center max-[930px]:fixed max-[930px]:bottom-0 max-[930px]:w-full">
             Created By
             <i className="fa-solid fa-heart text-red-700 px-1"></i>
             <a
